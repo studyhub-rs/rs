@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSC GD महत्वपूर्ण नोट्स | अध्ययन सामग्री</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#202329;
+  --muted:#68707b;
+  --navy:#18283f;
+  --navy-2:#263b59;
+  --cream:#f7f1e2;
+  --paper:#fffdf7;
+  --paper-2:#f2ead7;
+  --gold:#b88935;
+  --gold-soft:#d8bb78;
+  --red:#9e3d35;
+  --green:#1f8b5b;
+  --line:#dfd4bb;
+  --shadow:0 22px 60px rgba(26,34,45,.14);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:'Hind',sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,255,255,.7), transparent 25%),
+    linear-gradient(135deg,#dcd6c9 0%,#eee9df 48%,#d7d1c5 100%);
+}
+
+/* Desktop book / mobile reading surface */
+.shell{
+  width:min(1180px,calc(100% - 32px));
+  margin:28px auto;
+  background:var(--paper);
+  min-height:calc(100vh - 56px);
+  border:1px solid rgba(125,104,66,.18);
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.shell:before{
+  content:"";
+  position:absolute;inset:0;pointer-events:none;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(125,98,52,.018) 0 1px,transparent 1px 4px),
+    radial-gradient(rgba(100,78,42,.05) .6px,transparent .7px);
+  background-size:auto,7px 7px;
+  mix-blend-mode:multiply;
+}
+
+.topbar{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 34px;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,253,247,.94);
+  backdrop-filter:blur(10px);
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  color:var(--navy);font-weight:700;letter-spacing:.02em;
+}
+.brand-mark{
+  width:34px;height:34px;border:1.5px solid var(--gold);
+  display:grid;place-items:center;border-radius:50%;
+  font-family:Georgia,serif;color:var(--gold);
+}
+.edition{
+  font-size:12px;color:var(--muted);
+  padding:6px 10px;border:1px solid var(--line);border-radius:99px;
+}
+
+/* Hero */
+.hero{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:40px;align-items:center;
+  padding:70px 72px 64px;
+  background:
+    linear-gradient(105deg,rgba(255,253,247,.97),rgba(247,241,226,.9));
+  border-bottom:1px solid var(--line);
+}
+.hero-copy{max-width:680px}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;color:var(--red);
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:15px;
+}
+.kicker:before{content:"";width:28px;height:1px;background:var(--red)}
+h1{
+  margin:0;color:var(--navy);
+  font-family:'Tiro Devanagari Hindi',serif;
+  font-size:clamp(38px,5vw,62px);
+  line-height:1.12;font-weight:400;
+}
+.hero h1 span{color:var(--gold)}
+.lead{
+  margin:20px 0 0;max-width:610px;
+  font-size:18px;line-height:1.75;color:#555d67;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  min-height:50px;padding:12px 22px;border-radius:8px;
+  text-decoration:none;font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  transition:.2s ease;
+}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:0 9px 22px rgba(24,40,63,.2)}
+.btn-primary:hover{transform:translateY(-2px);background:var(--navy-2)}
+.btn-secondary{border:1px solid var(--line);color:var(--navy);background:#fffdf8}
+.btn-secondary:hover{border-color:var(--gold);background:var(--cream)}
+
+.book-wrap{display:flex;justify-content:center}
+.book{
+  width:min(310px,78vw);aspect-ratio:3/4;
+  position:relative;padding:26px 22px;
+  background:linear-gradient(90deg,#e9dfc6 0%,#fffaf0 5%,#fffdf7 94%,#e3d6b9 100%);
+  border:1px solid #cbbd9d;
+  box-shadow:18px 22px 30px rgba(38,38,28,.18);
+  transform:rotate(2deg);
+}
+.book:before{
+  content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;
+  background:linear-gradient(#d8c9a8,#f7f0de,#d8c9a8);
+}
+.book-cover{
+  height:100%;border:1px solid var(--gold);
+  outline:1px solid rgba(184,137,53,.28);outline-offset:-7px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:28px 22px;position:relative;
+}
+.book-small{font-size:12px;color:var(--red);font-weight:700;letter-spacing:.08em}
+.book-title{
+  margin:17px 0 12px;font-family:'Tiro Devanagari Hindi',serif;
+  color:var(--navy);font-size:30px;line-height:1.35;
+}
+.book-title strong{display:block;color:var(--gold);font-weight:400}
+.book-rule{width:70px;height:1px;background:var(--gold);margin:8px 0 17px}
+.book-sub{font-size:14px;color:#62605a;line-height:1.6}
+.book-badge{
+  margin-top:22px;padding:6px 13px;border:1px solid var(--red);
+  color:var(--red);font-size:11px;font-weight:700;letter-spacing:.04em;
+}
+
+/* Main content */
+.content{
+  position:relative;z-index:1;
+  padding:52px 72px 118px;
+}
+.section-head{
+  display:flex;align-items:end;justify-content:space-between;gap:20px;
+  margin-bottom:24px;
+}
+.section-title{
+  margin:0;font-family:'Tiro Devanagari Hindi',serif;
+  font-size:30px;font-weight:400;color:var(--navy);
+}
+.section-caption{margin:0;color:var(--muted);font-size:14px}
+
+/* Course card: easy to duplicate later */
+.course-card{
+  display:grid;grid-template-columns:92px 1fr auto;gap:22px;align-items:center;
+  padding:24px;background:rgba(255,253,247,.9);
+  border:1px solid var(--line);border-radius:14px;
+  box-shadow:0 8px 24px rgba(50,45,35,.06);
+  position:relative;overflow:hidden;
+}
+.course-card:after{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold);
+}
+.course-icon{
+  width:92px;height:110px;border-radius:7px;
+  background:linear-gradient(145deg,var(--navy),#304a6d);
+  color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 8px 18px rgba(24,40,63,.18);
+}
+.course-icon b{font-size:28px;font-family:Georgia,serif}
+.course-icon span{font-size:11px;letter-spacing:.1em;margin-top:5px;color:#e6d4a9}
+.course-name{margin:0;color:var(--navy);font-family:'Tiro Devanagari Hindi',serif;font-size:25px;font-weight:400}
+.course-desc{margin:5px 0 12px;color:var(--muted);line-height:1.6}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:12px;padding:5px 9px;background:var(--paper-2);color:#625b4c;border-radius:99px}
+.price{text-align:right;min-width:130px}
+.price .amount{font-size:28px;font-weight:700;color:var(--navy)}
+.price small{display:block;color:var(--muted);font-size:12px;margin-bottom:10px}
+
+/* Benefits */
+.benefits{
+  margin-top:44px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+}
+.benefit{
+  padding:20px;border:1px solid var(--line);background:#fffdf8;border-radius:10px;
+}
+.benefit-num{font-family:Georgia,serif;color:var(--gold);font-size:20px}
+.benefit h3{margin:10px 0 5px;color:var(--navy);font-size:17px}
+.benefit p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+
+/* Subject preview */
+.preview{
+  margin-top:52px;padding:28px 30px;
+  background:linear-gradient(135deg,#f3ead4,#fffaf0);
+  border:1px solid var(--line);border-radius:14px;
+}
+.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.subject{
+  padding:16px 18px;background:rgba(255,255,255,.65);
+  border:1px solid rgba(184,137,53,.25);border-radius:9px;
+  display:flex;justify-content:space-between;gap:10px;
+}
+.subject b{color:var(--navy);font-size:15px}
+.subject span{font-size:12px;color:var(--red);font-weight:600}
+
+/* CTA */
+.final-cta{
+  margin-top:52px;background:var(--navy);color:#fff;
+  border-radius:16px;padding:34px 38px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  position:relative;overflow:hidden;
+}
+.final-cta:after{
+  content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(216,187,120,.2);
+  border-radius:50%;right:-80px;top:-100px;
+}
+.final-cta h2{margin:0;font-family:'Tiro Devanagari Hindi',serif;font-size:27px;font-weight:400}
+.final-cta p{margin:6px 0 0;color:#cbd2dc;font-size:14px}
+.btn-wa{background:#25d366;color:#fff;position:relative;z-index:2}
+
+/* FAQ + footer */
+.faq{margin-top:52px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  width:100%;border:0;background:none;text-align:left;
+  padding:18px 2px;color:var(--navy);font:600 16px 'Hind',sans-serif;
+  cursor:pointer;display:flex;justify-content:space-between;gap:15px;
+}
+.faq-q .plus{color:var(--red);font-size:22px;transition:.2s}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;color:var(--muted);line-height:1.65;font-size:14px;transition:max-height .25s ease}
+.faq-item.open .faq-a{max-height:120px;padding:0 2px 17px}
+
+footer{
+  margin:0 72px;padding:25px 0 28px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px;
+}
+footer strong{color:var(--navy)}
+.sticky{
+  position:fixed;bottom:18px;left:50%;transform:translateX(-50%);
+  width:min(560px,calc(100% - 28px));z-index:20;
+  display:flex;gap:10px;padding:9px;
+  background:rgba(24,40,63,.94);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.12);border-radius:14px;
+  box-shadow:0 16px 40px rgba(0,0,0,.24);
+}
+.sticky .btn{flex:1;min-height:44px}
+.sticky .label{display:inline}
+
+@media(max-width:800px){
+  body{background:var(--cream)}
+  .shell{width:100%;margin:0;box-shadow:none;border:0;min-height:100vh}
+  .topbar{padding:13px 18px}
+  .edition{font-size:11px}
+  .hero{grid-template-columns:1fr;padding:46px 22px 40px;gap:28px}
+  h1{font-size:42px}
+  .lead{font-size:16px}
+  .book{width:240px}
+  .content{padding:38px 20px 108px}
+  .section-title{font-size:26px}
+  .section-caption{display:none}
+  .course-card{grid-template-columns:68px 1fr;gap:16px;padding:18px}
+  .course-icon{width:68px;height:84px}
+  .course-icon b{font-size:22px}
+  .price{grid-column:2;text-align:left}
+  .benefits{grid-template-columns:1fr}
+  .preview-grid{grid-template-columns:1fr}
+  .final-cta{padding:27px 22px;display:block}
+  .final-cta .btn{margin-top:18px;width:100%}
+  footer{margin:0 20px;display:block;padding-bottom:95px}
+  footer div+div{margin-top:8px}
+  .sticky{bottom:10px}
+  .sticky .label{display:none}
+}
+
+/* Exam category navigator */
+.category-section{margin:0 0 48px;padding:0!important;border:0!important}
+.category-list{display:flex;flex-direction:column;gap:8px}
+.category-card{
+  width:100%;border:1px solid var(--line);background:#fffdf8;border-radius:12px;
+  padding:16px 18px;display:grid;grid-template-columns:58px 1fr auto;align-items:center;
+  gap:15px;text-align:left;cursor:pointer;color:var(--navy);transition:.2s ease;
+}
+.category-card:hover,.category-card.active{border-color:var(--gold);box-shadow:0 7px 20px rgba(50,45,35,.06)}
+.category-card.active{background:linear-gradient(90deg,#fffaf0,#fffdf8)}
+.category-icon{
+  width:58px;height:58px;border-radius:10px;background:var(--navy);color:#fff;
+  display:grid;place-items:center;font:700 13px Georgia,serif;letter-spacing:.04em;
+}
+.category-icon.railway{background:#6d4b2c}
+.category-icon.defence{background:#526449}
+.category-info{display:flex;flex-direction:column;gap:1px}
+.category-info strong{font-size:19px}
+.category-info small{font-size:12px;color:var(--muted)}
+.chevron{font-size:25px;color:var(--gold);transition:.2s}
+.category-card.active .chevron{transform:rotate(45deg)}
+.category-menu{
+  display:none;margin:-2px 12px 5px;padding:9px;
+  background:#f4eddd;border:1px solid var(--line);border-top:0;border-radius:0 0 11px 11px;
+}
+.category-menu.open{display:block}
+.mini-course{
+  display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:12px;
+  padding:11px 10px;text-decoration:none;color:var(--navy);border-radius:8px;
+  background:#fffdf8;border:1px solid transparent;
+}
+.mini-course:hover,.mini-course.selected{border-color:rgba(184,137,53,.45)}
+.mini-code{
+  width:46px;height:46px;border-radius:7px;background:var(--navy);color:#fff;
+  display:grid;place-items:center;font:700 14px Georgia,serif;
+}
+.mini-course span:nth-child(2){display:flex;flex-direction:column}
+.mini-course b{font-size:15px}
+.mini-course small{font-size:12px;color:var(--muted);margin-top:1px}
+.mini-arrow{font-size:20px;color:var(--gold)}
+.future-course{
+  padding:10px 8px 3px;color:#8a806c;font-size:12px;text-align:center;
+}
+.future-course span{color:var(--gold);font-size:15px;margin-right:4px}
+.coming-soon{opacity:.86}
+.railway-cover{background:#6d4b2c}
+.coming{font-size:13px;color:var(--red);font-weight:700;line-height:1.3}
+
+</style>
+</head>
+
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">अ</div>
+      <span>अध्ययन सामग्री</span>
+    </div>
+    <div class="edition">SSC GD • Notes Edition</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="kicker">SSC GD परीक्षा तैयारी</div>
+        <h1>SSC GD के लिए <span>महत्वपूर्ण नोट्स</span></h1>
+        <p class="lead">
+          परीक्षा के लिए जरूरी विषयों को व्यवस्थित, सरल और दोहराने योग्य रूप में तैयार की गई
+          हिंदी अध्ययन सामग्री। पढ़िए, रिवाइज कीजिए और अपने नोट्स को एक जगह रखिए।
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" onclick="buyNow(event)">नोट्स प्राप्त करें · ₹99</a>
+          <a class="btn btn-secondary" href="#preview">विषय देखें</a>
+        </div>
+      </div>
+
+      <div class="book-wrap">
+        <div class="book">
+          <div class="book-cover">
+            <div class="book-small">SSC GD • STUDY NOTES</div>
+            <div class="book-title">महत्वपूर्ण<strong>नोट्स</strong></div>
+            <div class="book-rule"></div>
+            <div class="book-sub">परीक्षा-केंद्रित<br>हिंदी अध्ययन सामग्री</div>
+            <div class="book-badge">REVISION EDITION</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+
+      <section class="category-section" id="categories">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">परीक्षा श्रेणियाँ</h2>
+            <p class="section-caption">अपनी परीक्षा चुनें और उपलब्ध अध्ययन सामग्री देखें</p>
+          </div>
+        </div>
+
+        <div class="category-list">
+          <button class="category-card active" type="button" onclick="openCategory('ssc', this)">
+            <span class="category-icon">SSC</span>
+            <span class="category-info">
+              <strong>SSC</strong>
+              <small>Staff Selection Commission</small>
+            </span>
+            <span class="chevron">+</span>
+          </button>
+
+          <div class="category-menu open" id="menu-ssc">
+            <a class="mini-course selected" href="#ssc-gd">
+              <span class="mini-code">GD</span>
+              <span><b>SSC GD</b><small>महत्वपूर्ण नोट्स</small></span>
+              <span class="mini-arrow">→</span>
+            </a>
+            <div class="future-course"><span>+</span> अन्य SSC courses जल्द उपलब्ध होंगे</div>
+          </div>
+
+          <button class="category-card" type="button" onclick="openCategory('railway', this)">
+            <span class="category-icon railway">RRB</span>
+            <span class="category-info">
+              <strong>Railway</strong>
+              <small>Railway Recruitment</small>
+            </span>
+            <span class="chevron">+</span>
+          </button>
+
+          <div class="category-menu" id="menu-railway">
+            <a class="mini-course" href="#railway-group-d">
+              <span class="mini-code">D</span>
+              <span><b>Railway Group D</b><small>महत्वपूर्ण नोट्स</small></span>
+              <span class="mini-arrow">→</span>
+            </a>
+            <div class="future-course"><span>+</span> अन्य Railway courses जल्द उपलब्ध होंगे</div>
+          </div>
+
+          <button class="category-card" type="button" onclick="openCategory('defence', this)">
+            <span class="category-icon defence">DEF</span>
+            <span class="category-info">
+              <strong>Defence</strong>
+              <small>Defence Recruitment</small>
+            </span>
+            <span class="chevron">+</span>
+          </button>
+
+          <div class="category-menu" id="menu-defence">
+            <div class="future-course"><span>+</span> Defence courses जल्द उपलब्ध होंगे</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">उपलब्ध अध्ययन सामग्री</h2>
+          <p class="section-caption">अभी उपलब्ध कोर्स</p>
+        </div>
+      </div>
+
+      <article class="course-card" id="ssc-gd">
+        <div class="course-icon"><b>GD</b><span>SSC</span></div>
+        <div>
+          <h3 class="course-name">SSC GD महत्वपूर्ण नोट्स</h3>
+          <p class="course-desc">
+            SSC GD परीक्षा के अध्ययन और त्वरित पुनरावृत्ति के लिए तैयार की गई संक्षिप्त हिंदी नोट्स PDF।
+          </p>
+          <div class="tags">
+            <span class="tag">हिंदी माध्यम</span>
+            <span class="tag">परीक्षा-केंद्रित</span>
+            <span class="tag">PDF</span>
+          </div>
+        </div>
+        <div class="price">
+          <div class="amount">₹99</div>
+          <small>एक बार का भुगतान</small>
+          <a class="btn btn-primary" href="#" onclick="buyNow(event)">प्राप्त करें</a>
+        </div>
+      </article>
+
+      <article class="course-card coming-soon" id="railway-group-d">
+        <div class="course-icon railway-cover"><b>D</b><span>RRB</span></div>
+        <div>
+          <h3 class="course-name">Railway Group D</h3>
+          <p class="course-desc">Railway Group D के लिए महत्वपूर्ण अध्ययन सामग्री — course जल्द उपलब्ध होगा।</p>
+          <div class="tags"><span class="tag">Coming Soon</span><span class="tag">हिंदी माध्यम</span></div>
+        </div>
+        <div class="price">
+          <div class="coming">जल्द आ रहा है</div>
+        </div>
+      </article>
+
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit-num">01</div>
+          <h3>विषयवार व्यवस्थित</h3>
+          <p>पढ़ाई को आसान बनाने के लिए सामग्री को स्पष्ट विषयों और हिस्सों में व्यवस्थित किया गया है।</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">02</div>
+          <h3>त्वरित Revision</h3>
+          <p>कम समय में जरूरी बिंदुओं को दोहराने के लिए साफ और स्कैन करने योग्य प्रस्तुति।</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-num">03</div>
+          <h3>मोबाइल-फ्रेंडली PDF</h3>
+          <p>मोबाइल पर पढ़ने और डाउनलोड करके ऑफलाइन रखने के लिए तैयार डिजिटल नोट्स।</p>
+        </div>
+      </div>
+
+      <section class="preview" id="preview">
+        <div class="section-head" style="margin-bottom:0">
+          <div>
+            <h2 class="section-title">नोट्स में क्या पढ़ेंगे?</h2>
+            <p class="section-caption">SSC GD के लिए विषय-केंद्रित अध्ययन</p>
+          </div>
+        </div>
+        <div class="preview-grid">
+          <div class="subject"><b>सामान्य ज्ञान / जागरूकता</b><span>NOTES</span></div>
+          <div class="subject"><b>हिंदी भाषा</b><span>NOTES</span></div>
+          <div class="subject"><b>गणित</b><span>NOTES</span></div>
+          <div class="subject"><b>रीजनिंग</b><span>NOTES</span></div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div>
+          <h2>SSC GD Notes — ₹99</h2>
+          <p>WhatsApp पर संपर्क करें और भुगतान की जानकारी प्राप्त करें।</p>
+        </div>
+        <a class="btn btn-wa" href="#" onclick="buyNow(event)">WhatsApp पर प्राप्त करें</a>
+      </section>
+
+      <section class="faq">
+        <h2 class="section-title">अक्सर पूछे जाने वाले सवाल</h2>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>PDF कैसे मिलेगी?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a">भुगतान पूरा होने के बाद WhatsApp पर PDF भेज दी जाएगी।</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>भुगतान कैसे करें?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a">WhatsApp पर संपर्क करने के बाद UPI / GPay / PhonePe से भुगतान की जानकारी दी जाएगी।</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>क्या नोट्स हिंदी में हैं?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a">हाँ, यह अध्ययन सामग्री हिंदी माध्यम के विद्यार्थियों के लिए तैयार की गई है।</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>क्या खरीदने से पहले Sample मिल सकता है?</span><span class="plus">+</span>
+          </button>
+          <div class="faq-a">हाँ, WhatsApp पर संपर्क करके उपलब्ध Sample के बारे में पूछा जा सकता है।</div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>SSC GD महत्वपूर्ण नोट्स</strong> · अध्ययन सामग्री</div>
+    <div>सहायता: <strong>+91 87913 63221</strong> · स्वतंत्र अध्ययन सामग्री</div>
+  </footer>
+</div>
+
+<div class="sticky">
+  <a class="btn btn-secondary" href="#preview">विषय देखें</a>
+  <a class="btn btn-wa" href="#" onclick="buyNow(event)">WhatsApp पर प्राप्त करें <span class="label">· ₹99</span></a>
+</div>
+
+<script>
+const PHONE = "918791363221";
+
+function buyNow(e){
+  e.preventDefault();
+  const msg = "नमस्ते! मुझे SSC GD महत्वपूर्ण नोट्स (₹99) प्राप्त करने हैं। कृपया भुगतान की जानकारी भेजें।";
+  window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank");
+}
+
+
+function openCategory(id, button){
+  document.querySelectorAll('.category-card').forEach(card=>{
+    if(card !== button) card.classList.remove('active');
+  });
+  document.querySelectorAll('.category-menu').forEach(menu=>{
+    if(menu.id !== 'menu-' + id) menu.classList.remove('open');
+  });
+
+  button.classList.toggle('active');
+  document.getElementById('menu-' + id).classList.toggle('open');
+}
+
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  document.querySelectorAll('.faq-item.open').forEach(el=>{
+    if(el !== item) el.classList.remove('open');
+  });
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>
